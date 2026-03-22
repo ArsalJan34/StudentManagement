@@ -1,0 +1,204 @@
+/* =========================
+   ADMIN DASHBOARD STYLES
+========================= */
+:root {
+  /* ===== COLORS ===== */
+  --white: #ffffff;
+  --black: #0f172a;
+  --gray-light: #f1f5f9;
+  --gray-lighter: #f8fafc;
+  --gray-dark: #475569;
+  --blue: #2563eb;
+  --blue-light: #3b82f6;
+  --blue-dark: #1e40af;
+  --red: #ef4444;
+  --red-dark: #dc2626;
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: var(--black);
+  --text-secondary: var(--gray-dark);
+  --text-white: var(--white);
+  --text-link: var(--blue);
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: var(--gray-lighter);
+  --bg-card: var(--white);
+  --bg-input: var(--gray-light);
+  --bg-hover: #e2e8f0;
+
+  /* ===== BORDERS ===== */
+  --border-light: #cbd5e1;
+  --border-main: var(#8b1dcb);
+  --border-focus: var(--blue);
+
+  /* ===== BUTTONS ===== */
+  --btn-primary: var(--blue);
+  --btn-primary-hover: var(--blue-dark);
+  --btn-text: var(--white);
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: var(--bg-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: var(--text-main);
+}
+
+/* ===== TITLES ===== */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--text-main);
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--text-main);
+}
+
+/* ===== CONTAINER ===== */
+.admin-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== TABLE CARD ===== */
+.table-wrapper {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  padding: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  margin-bottom: 30px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background: var(--bg-input);
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-light);
+}
+
+th {
+  font-weight: 600;
+}
+
+/* ===== ROW HOVER ===== */
+tbody tr:hover {
+  background: var(--bg-hover);
+  transition: 0.2s;
+}
+
+/* ===== INPUTS ===== */
+table input {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-main);
+  background: var(--bg-input);
+  outline: none;
+  font-size: 13px;
+  width: 120px;
+}
+
+table input:focus {
+  border-color: var(--border-focus);
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== BUTTONS ===== */
+table button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  margin-right: 5px;
+}
+
+/* Save Button */
+table button.save-btn {
+  background: var(--btn-primary);
+  color: var(--btn-text);
+}
+
+table button.save-btn:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* Edit Button */
+table button.edit-btn {
+  background: var(--blue-light);
+  color: var(--text-white);
+}
+
+table button.edit-btn:hover {
+  background: var(--blue-dark);
+}
+
+/* Delete Button */
+table button.delete-btn {
+  background: var(--red);
+  color: var(--white);
+}
+
+table button.delete-btn:hover {
+  background: var(--red-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  table input {
+    width: 100px;
+  }
+}

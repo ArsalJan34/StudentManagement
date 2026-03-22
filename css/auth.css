@@ -1,0 +1,188 @@
+:root {
+
+  /* ===== PRIMARY COLORS ===== */
+  --color-white: #ffffff;
+  --color-blue: #2563eb;
+  --color-blue-light: #3b82f6;
+  --color-blue-dark: #1e40af;
+  --color-black: #0f172a;
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #f1f5f9;
+  --bg-hover: #e2e8f0;
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-white: #ffffff;
+  --text-link: #2563eb;
+
+  /* ===== BORDER COLORS ===== */
+  --border-light: #88aad7;
+  --border-main: #2463b0;
+  --border-focus: #2563eb;
+
+  /* ===== BUTTON COLORS ===== */
+  --btn-primary: #2563eb;
+  --btn-primary-hover: #1d4ed8;
+  --btn-text: #ffffff;
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  /* ===== RADIUS ===== */
+  --radius-small: 6px;
+  --radius-medium: 10px;
+  --radius-large: 16px;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: var(--bg-main);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+}
+
+/* ===== SECTION ===== */
+.FormSection {
+  width: 100%;
+  padding: 20px;
+}
+
+.FormSection h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+/* ===== CARD FORM ===== */
+.Form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-large);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== INPUT ===== */
+.Form input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-main);
+  background: var(--bg-input);
+  outline: none;
+  transition: .25s;
+  font-size: 14px;
+}
+
+.Form input:focus {
+  border-color: var(--border-focus);
+  background: var(--color-white);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== BUTTON ===== */
+.signupbtn {
+  align-self: center;
+  max-width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--btn-primary);
+  color: var(--btn-text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: .25s;
+  font-weight: 600;
+}
+
+.signupbtn:hover {
+  background: var(--btn-primary-hover);
+}
+.loginbtn {
+  align-self: center;
+  max-width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--btn-primary);
+  color: var(--btn-text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: .25s;
+  font-weight: 600;
+}
+
+.loginbtn:hover {
+  background: var(--btn-primary-hover);
+}
+/* ===== GOOGLE BUTTON ===== */
+.google-btn {
+  background: var(--color-white);
+  color: var(--text-main);
+  border: 1px solid var(--border-main);
+  border-radius: var(--radius-small);
+  align-self: center;
+    max-width: 300px;
+    padding: 14px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 600;
+}
+.bxl-google{
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+background: linear-gradient(45deg,
+      #4285F4,
+      #EA4335,
+      #FBBC05,
+      #34A853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.google-btn:hover {
+  background: var(--bg-hover);
+}
+
+/* ===== LINK ===== */
+.Form a {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-link);
+  margin-top: 5px;
+}
+
+.Form a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:500px) {
+  .Form {
+    padding: 30px 20px;
+  }
+}

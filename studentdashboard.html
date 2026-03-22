@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Dashboard</title>
+
+  <link rel="stylesheet" href="./css/studentdashboard.css">
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script src="./js/firebase.js"></script>
+</head>
+
+<body>
+<a href="login.html" class="button">Go Back</a>
+<section class="home">
+<h1>Student Dashboard</h1>
+<table class="student-table">
+  <tbody id="tableBody"></tbody>
+</table>
+<h1>Profile Section</h1>
+
+<div class="profile-section">
+<div class="profile-card">
+
+  <div class="profile-left">
+    <img id="profileImg" src="https://via.placeholder.com/120" class="profile-img">
+
+    <input type="file" id="imgUpload">
+
+  </div>
+
+  <div class="profile-right">
+
+    <label>Name</label>
+    <input type="text" id="name">
+
+    <label>Phone</label>
+    <input type="text" id="phone">
+
+    <label>New Password</label>
+    <input type="password" id="password">
+
+    <p><strong>Joined:</strong> <span id="joinedDate"></span></p>
+
+    <button onclick="updateProfile()">Update Profile</button>
+
+  </div>
+
+</div>
+
+</div>
+<div class="attendance-section">
+  <h1>Attendance</h1>
+<div class="attendance-box">
+  <div class="attendance-stats">
+    <p><strong>Total Classes:</strong> <span id="totalClasses">0</span></p>
+    <p><strong>Present:</strong> <span id="presentCount">0</span></p>
+    <p><strong>Absent:</strong> <span id="absentCount">0</span></p>
+    <p><strong>Attendance %:</strong> <span id="attendancePercent">0%</span></p>
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="attendanceProgress"></div>
+  </div>
+  </div>
+</div>
+
+</section>
+  <script src="./js/studentdashboard.js"></script>
+
+</body>
+
+</html>

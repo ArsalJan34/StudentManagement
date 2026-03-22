@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/auth.css">
+  <title>Student Management</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="./js/firebase.js"></script>
+</head>
+
+<body>
+  <section class="FormSection">
+    <h2>Login In</h2>
+    <div class="Form">
+      <input type="email" placeholder="Enter Email" id="email">
+      <input type="password" placeholder="Enter Password" id="password">
+      <a href="signup.html">Dont have account?</a>
+            <a href="adminlogin.html">Are you An Admin?</a>
+      <a href="#">Forgot Password</a>
+      <button class="loginbtn" onclick="login()">Login In</button>
+    </div>
+  </section>
+  <script src="./js/auth.js"></script>
+</body>
+
+</html>
