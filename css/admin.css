@@ -224,3 +224,68 @@ table button.delete-btn:hover {
     width: 100px;
   }
 }
+/* reponsiveness */
+/* Laptop */
+@media (max-width:1200px) {
+  table {
+    min-width: 700px;
+  }
+}
+
+/* Tablet */
+@media (max-width:992px) {
+  table {
+    min-width: 650px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Big Phones */
+@media (max-width:768px) {
+  table {
+    min-width: 600px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  table input {
+    width: 90px;
+  }
+
+  table button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Small Phones */
+@media (max-width:480px) {
+  table {
+    min-width: 520px;
+  }
+
+  table input {
+    width: 75px;
+    font-size: 12px;
+  }
+
+  table button {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+@media (max-height:650px) {
+  body {
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+}

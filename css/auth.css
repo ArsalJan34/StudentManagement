@@ -200,15 +200,85 @@ background: linear-gradient(45deg,
 .Form a:hover {
   text-decoration: underline;
 }
-
+.FormSection {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width:500px) {
   .Form {
     padding: 30px 20px;
   }
 }
-@media (max-width: 768px) {
-  .Form{
 
+.Form {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 30px;
+}
+
+/* Large Desktop */
+@media (min-width:1400px) {
+  .Form {
+    max-width: 460px;
+    padding: 45px 35px;
+  }
+}
+
+/* Laptop */
+@media (max-width:1200px) {
+  .Form {
+    max-width: 420px;
+  }
+}
+
+/* Tablet */
+@media (max-width:992px) {
+  .Form {
+    max-width: 380px;
+    padding: 35px 25px;
+  }
+}
+
+/* Big Phones */
+@media (max-width:768px) {
+  body {
+    padding: 15px;
+  }
+
+  .Form {
+    max-width: 100%;
+    padding: 30px 22px;
+  }
+}
+
+/* Small Phones */
+@media (max-width:480px) {
+  body {
+    padding: 12px;
+  }
+
+  .Form {
+    padding: 26px 18px;
+    border-radius: 14px;
+  }
+
+  .Form input {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .signupbtn,
+  .loginbtn,
+  .google-btn {
+    padding: 12px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .Form h2 {
+    font-size: 20px;
   }
 }
