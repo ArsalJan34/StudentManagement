@@ -1,132 +1,108 @@
 /* =========================
    ADMIN DASHBOARD STYLES
 ========================= */
+
 :root {
-  /* ===== COLORS ===== */
+
   --white: #ffffff;
   --black: #0f172a;
   --gray-light: #f1f5f9;
   --gray-lighter: #f8fafc;
   --gray-dark: #475569;
+
   --blue: #2563eb;
   --blue-light: #3b82f6;
   --blue-dark: #1e40af;
+
   --red: #ef4444;
   --red-dark: #dc2626;
+
   --primary: #7a00aa;
-    --primary-dark: #610187;
-    --secondary: #a802ea;
-    --ternary: #b471ce;
+  --primary-dark: #610187;
+  --secondary: #a802ea;
+  --ternary: #b471ce;
 
-    --bg-main: #f8fafc;
-    --bg-card: #ffffff;
-    --bg-input: #f1f5f9;
-
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --text-white: #ffffff;
-
-    --border: #8b1dcb;
-  /* ===== TEXT COLORS ===== */
-  --text-main: var(--black);
-  --text-secondary: var(--gray-dark);
-  --text-white: var(--white);
-  --text-link: var(--blue);
-
-  /* ===== BACKGROUNDS ===== */
   --bg-main: var(--gray-lighter);
   --bg-card: var(--white);
   --bg-input: var(--gray-light);
   --bg-hover: #e2e8f0;
 
-  /* ===== BORDERS ===== */
+  --text-main: var(--black);
+  --text-secondary: var(--gray-dark);
+  --text-white: var(--white);
+
   --border-light: #cbd5e1;
-  --border-main: var(#8b1dcb);
+  --border-main: #8b1dcb;
   --border-focus: var(--blue);
 
-  /* ===== BUTTONS ===== */
   --btn-primary: var(--blue);
   --btn-primary-hover: var(--blue-dark);
   --btn-text: var(--white);
 
-  /* ===== SHADOW ===== */
-  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, .05);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, .08);
 
-  /* ===== RADIUS ===== */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
 }
 
-/* ===== RESET ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
+/* BODY */
 body {
   background: var(--bg-main);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  width: 100%;
+  padding: clamp(12px, 3vw, 30px);
+  display: block;
   color: var(--text-main);
 }
 
-/* ===== TITLES ===== */
+/* TITLES */
 h1,
 h2 {
   text-align: center;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: 600;
-    background: var(--ternary);
-    box-shadow: var(--shadow-sm);
-    border-bottom: 1px solid var(--border);
-    border-radius: var(--radius);
-    width: 100%;
-    text-transform: uppercase;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: clamp(14px, 2vw, 20px);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  background: var(--ternary);
+  box-shadow: var(--shadow-soft);
+  border-bottom: 1px solid #8b1dcb;
+  border-radius: var(--radius-md);
+  width: 100%;
+  text-transform: uppercase;
 }
 
-h1 {
-  font-size: 28px;
-  color: var(--text-main);
-}
-
-h2 {
-  font-size: 22px;
-  color: var(--text-main);
-}
-
-/* ===== CONTAINER ===== */
+/* CONTAINER */
 .admin-container {
-  width: 95%;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* ===== TABLE CARD ===== */
+/* TABLE CARD */
 .table-wrapper {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-medium);
-  padding: 20px;
+  padding: clamp(12px, 2vw, 20px);
   overflow-x: auto;
   border: 1px solid var(--border-light);
   margin-bottom: 30px;
 }
 
-/* ===== TABLE ===== */
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 800px;
+  min-width: 700px;
 }
 
 thead {
@@ -138,38 +114,29 @@ td {
   padding: 14px;
   text-align: left;
   font-size: 14px;
-  color: var(--text-main);
   border-bottom: 1px solid var(--border-light);
 }
 
-th {
-  font-weight: 600;
-}
-
-/* ===== ROW HOVER ===== */
 tbody tr:hover {
   background: var(--bg-hover);
-  transition: 0.2s;
 }
 
-/* ===== INPUTS ===== */
+/* INPUT */
 table input {
   padding: 8px 10px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-main);
   background: var(--bg-input);
-  outline: none;
   font-size: 13px;
-  width: 120px;
+  width: 110px;
 }
 
 table input:focus {
   border-color: var(--border-focus);
-  background: var(--white);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  background: white;
 }
 
-/* ===== BUTTONS ===== */
+/* BUTTON */
 table button {
   padding: 6px 12px;
   border: none;
@@ -177,66 +144,47 @@ table button {
   font-size: 13px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.2s;
   margin-right: 5px;
 }
 
-/* Save Button */
-table button.save-btn {
+.save-btn {
   background: var(--btn-primary);
-  color: var(--btn-text);
+  color: white;
 }
 
-table button.save-btn:hover {
+.save-btn:hover {
   background: var(--btn-primary-hover);
 }
 
-/* Edit Button */
-table button.edit-btn {
+.edit-btn {
   background: var(--blue-light);
-  color: var(--text-white);
+  color: white;
 }
 
-table button.edit-btn:hover {
+.edit-btn:hover {
   background: var(--blue-dark);
 }
 
-/* Delete Button */
-table button.delete-btn {
+.delete-btn {
   background: var(--red);
-  color: var(--white);
+  color: white;
 }
 
-table button.delete-btn:hover {
+.delete-btn:hover {
   background: var(--red-dark);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE SYSTEM ===== */
 
-  th,
-  td {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  table input {
-    width: 100px;
-  }
-}
-/* reponsiveness */
 /* Laptop */
 @media (max-width:1200px) {
   table {
-    min-width: 700px;
+    min-width: 650px;
   }
 }
 
 /* Tablet */
 @media (max-width:992px) {
-  table {
-    min-width: 650px;
-  }
 
   th,
   td {
@@ -245,8 +193,9 @@ table button.delete-btn:hover {
   }
 }
 
-/* Big Phones */
+/* Phones */
 @media (max-width:768px) {
+
   table {
     min-width: 600px;
   }
@@ -265,10 +214,16 @@ table button.delete-btn:hover {
     padding: 5px 10px;
     font-size: 12px;
   }
+
 }
 
 /* Small Phones */
 @media (max-width:480px) {
+
+  body {
+    padding: 12px;
+  }
+
   table {
     min-width: 520px;
   }
@@ -282,13 +237,12 @@ table button.delete-btn:hover {
     padding: 4px 8px;
     font-size: 11px;
   }
+
 }
+
+/* Short Height Screens */
 @media (max-height:650px) {
   body {
-    align-items: flex-start;
-    padding-top: 25px;
+    padding-top: 20px;
   }
 }
-
-
-/* okays */
