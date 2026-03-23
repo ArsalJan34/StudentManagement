@@ -263,3 +263,67 @@ button {
     font-size: 13px;
   }
 }
+/* Table Mobile System */
+@media (max-width:768px) {
+
+  .student-table {
+    display: block;
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+
+  .student-table table {
+    min-width: 600px;
+  }
+
+}
+
+/* Profile Real Stack Fix */
+@media (max-width:768px) {
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+}
+
+/* Attendance Real Fix */
+@media (max-width:768px) {
+
+  .attendance-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+
+/* Small Phone Fix */
+@media (max-width:480px) {
+
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+    padding: 16px;
+  }
+
+  .profile-right input {
+    font-size: 13px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
