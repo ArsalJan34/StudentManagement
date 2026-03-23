@@ -350,6 +350,10 @@ button:active {
     overflow-x: auto;
     white-space: nowrap;
   }
+  .profile-card{
+    padding: 10px;
+    width: 200px;
+  }
 }
 @media (max-width:992px) {
   .attendance-stats p {
