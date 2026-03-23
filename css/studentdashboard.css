@@ -40,6 +40,11 @@ body {
   align-items: center;
   justify-content: center;
 
+      min-height: 100vh;
+      width: 100%;
+      padding: 20px;
+
+
 }
 .button{
   padding: 10px;
@@ -287,6 +292,18 @@ button:active {
   background: #4caf50;
   transition: width 0.5s ease;
 }
+.student-table,
+.profile-card,
+.profile-section,
+.attendance-box {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.attendance-stats p {
+  width: 100%;
+}
 /* responsiveness */
 @media (max-width:992px) {
   .profile-card {
@@ -345,6 +362,7 @@ button:active {
 
 /* Phones → Horizontal scroll safe */
 @media (max-width:600px) {
+
   .student-table {
     display: block;
     overflow-x: auto;
