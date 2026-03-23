@@ -1,8 +1,9 @@
 :root {
   /* ===== COLOR SYSTEM ===== */
-  --primary: #2563eb;
-  --primary-dark: #1e40af;
-  --secondary: #64748b;
+  --primary: #7a00aa;
+  --primary-dark: #610187;
+  --secondary: #a802ea;
+  --ternary: #b471ce;
 
   --bg-main: #f8fafc;
   --bg-card: #ffffff;
@@ -42,12 +43,13 @@ body {
 }
 .button{
   padding: 10px;
+  color: white;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   align-self: flex-start;
   position: fixed;
   left: 30px;
-  background-color: rgb(248, 94, 248);
+  background-color:var(--primary);
   margin: 5px;
   text-align: center;
   font-weight: bold;
@@ -61,9 +63,11 @@ h1 {
   padding: 20px;
   font-size: 28px;
   font-weight: 600;
-  background: var(--bg-card);
+  background: var(--ternary);
   box-shadow: var(--shadow-sm);
   border-bottom: 1px solid var(--border);
+  border-radius: var(--radius);
+
 }
 
 /* ===== STUDENT TABLE ===== */

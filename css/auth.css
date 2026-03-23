@@ -6,7 +6,11 @@
   --color-blue-light: #3b82f6;
   --color-blue-dark: #1e40af;
   --color-black: #0f172a;
-
+    --primary: #7a00aa;
+      --primary-dark: #610187;
+      --secondary: #a802ea;
+      --ternary: #b471ce;
+        --border: #8b1dcb;
   /* ===== BACKGROUNDS ===== */
   --bg-main: #f8fafc;
   --bg-card: #ffffff;
@@ -49,7 +53,17 @@
 
 /* ===== BODY ===== */
 body {
-  background: var(--bg-main);
+  min-height: 100vh;
+    margin: 0;
+
+    background-image: url("../assets/authbg.jpg");
+    background-size: cover;
+    /* fills whole screen */
+    background-position: center;
+    /* keeps focus center */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* premium parallax feel */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -66,14 +80,15 @@ body {
 .FormSection h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: var(--text-main);
+  color: white;
 }
 
 /* ===== CARD FORM ===== */
 .Form {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-medium);
+  background: transparent;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   border-radius: var(--radius-large);
   padding: 40px 30px;
   width: 100%;
@@ -84,14 +99,20 @@ body {
   flex-direction: column;
   gap: 15px;
 }
-
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+;
+}
 /* ===== INPUT ===== */
 .Form input {
   width: 100%;
   padding: 14px 15px;
   border-radius: var(--radius-small);
   border: 1px solid var(--border-main);
-  background: var(--bg-input);
+  background: transparent;
   outline: none;
   transition: .25s;
   font-size: 14px;
@@ -108,9 +129,9 @@ body {
   align-self: center;
   max-width: 300px;
   padding: 14px;
-  border: none;
+border: 1px solid var(--secondary);
   border-radius: var(--radius-small);
-  background: var(--btn-primary);
+  background: transparent;
   color: var(--btn-text);
   font-size: 15px;
   cursor: pointer;
@@ -119,15 +140,15 @@ body {
 }
 
 .signupbtn:hover {
-  background: var(--btn-primary-hover);
+  background: var(--primary);
 }
 .loginbtn {
   align-self: center;
   max-width: 300px;
   padding: 14px;
-  border: none;
+  border: 1px solid var(--secondary);
   border-radius: var(--radius-small);
-  background: var(--btn-primary);
+  background: transparent;
   color: var(--btn-text);
   font-size: 15px;
   cursor: pointer;
@@ -136,7 +157,7 @@ body {
 }
 
 .loginbtn:hover {
-  background: var(--btn-primary-hover);
+  background: var(--primary);
 }
 /* ===== GOOGLE BUTTON ===== */
 .google-btn {
@@ -184,5 +205,10 @@ background: linear-gradient(45deg,
 @media (max-width:500px) {
   .Form {
     padding: 30px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .Form{
+
   }
 }

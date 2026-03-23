@@ -173,3 +173,70 @@ function editAttendance(uid) {
     }, () => updateAttendanceUI(uid));
   });
 }
+
+
+// Marks table
+const marksTableBody = document.getElementById("marksTableBody");
+
+db.ref("Users").on("value", snapshot => {
+
+  marksTableBody.innerHTML = "";
+
+  snapshot.forEach(child => {
+
+    const data = child.val();
+    const uid = child.key;
+
+    const python = data.marks?.python || 0;
+    const dld = data.marks?.dld || 0;
+    const ml = data.marks?.ml || 0;
+    const os = data.marks?.os || 0;
+    const dbms = data.marks?.dbms || 0;
+
+    const total = python + dld + ml + os + dbms;
+    const percent = Math.round(total / 5);
+
+    const row = `
+      <tr>
+        <td>${data.name || ""}</td>
+        <td>${data.roll || ""}</td>
+        <td id="python-${uid}">${python}</td>
+        <td id="dld-${uid}">${dld}</td>
+        <td id="ml-${uid}">${ml}</td>
+        <td id="os-${uid}">${os}</td>
+        <td id="dbms-${uid}">${dbms}</td>
+
+        <td>
+          <button onclick="editMarks('${uid}')">Edit</button>
+        </td>
+      </tr>
+    `;
+
+    marksTableBody.innerHTML += row;
+
+  });
+
+});
+function editMarks(uid){
+
+  db.ref("Users/" + uid + "/marks").once("value", snap => {
+
+    const data = snap.val() || {};
+
+    const python = parseInt(prompt("Python:", data.python || 0)) || 0;
+    const dld = parseInt(prompt("DLD:", data.dld || 0)) || 0;
+    const ml = parseInt(prompt("ML:", data.ml || 0)) || 0;
+    const os = parseInt(prompt("OS:", data.os || 0)) || 0;
+    const dbms = parseInt(prompt("DBMS:", data.dbms || 0)) || 0;
+
+    db.ref("Users/" + uid + "/marks").update({
+      python,
+      dld,
+      ml,
+      os,
+      dbms
+    });
+
+  });
+
+}

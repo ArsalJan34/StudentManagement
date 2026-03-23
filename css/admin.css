@@ -13,7 +13,20 @@
   --blue-dark: #1e40af;
   --red: #ef4444;
   --red-dark: #dc2626;
+  --primary: #7a00aa;
+    --primary-dark: #610187;
+    --secondary: #a802ea;
+    --ternary: #b471ce;
 
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-input: #f1f5f9;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-white: #ffffff;
+
+    --border: #8b1dcb;
   /* ===== TEXT COLORS ===== */
   --text-main: var(--black);
   --text-secondary: var(--gray-dark);
@@ -69,7 +82,16 @@ body {
 h1,
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    background: var(--ternary);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 100%;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1 {
